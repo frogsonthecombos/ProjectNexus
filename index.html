@@ -1,222 +1,959 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEXUS — The Gaming Network</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NEXUS — The Gaming Network"
+    >
+
+    <title>NEXUS — THE GAMING NETWORK</title>
+
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
-  <div class="background-grid"></div>
-  <div class="noise"></div>
+<!-- =========================================================
+     LOADER
+========================================================= -->
 
-  <header>
-    <a class="logo" href="#">
-      <span>N</span>EXUS
+<div id="loader">
+
+    <div class="loader-inner">
+
+        <div class="loader-brand">
+            NEXUS
+        </div>
+
+        <div class="loader-sub">
+            THE GAMING NETWORK
+        </div>
+
+        <div class="loader-progress">
+            <div id="loaderBar"></div>
+        </div>
+
+        <div class="loader-status">
+            <span id="loaderText">INITIALIZING NETWORK</span>
+            <span id="loaderPercent">00%</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     CURSOR
+========================================================= -->
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-glow"></div>
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<canvas id="particleCanvas"></canvas>
+
+<div class="background-grid"></div>
+
+<div class="scanlines"></div>
+
+<div class="noise"></div>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+<div class="ambient ambient-three"></div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header id="header">
+
+    <a href="#home" class="logo magnetic">
+
+        <span class="logo-main">
+            NEXUS
+        </span>
+
+        <span class="logo-sub">
+            THE GAMING NETWORK
+        </span>
+
     </a>
 
-    <nav>
-      <a href="#games">Games</a>
-      <a href="#media">Media</a>
-      <a href="#news">News</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#hardware">Hardware</a>
+
+    <nav id="mainNav">
+
+        <a href="#home" class="nav-link active">
+            <span>01</span>
+            HOME
+        </a>
+
+        <a href="#explore" class="nav-link">
+            <span>02</span>
+            EXPLORE
+        </a>
+
+        <a href="#featured" class="nav-link">
+            <span>03</span>
+            FEATURED
+        </a>
+
+        <a href="#trending" class="nav-link">
+            <span>04</span>
+            TRENDING
+        </a>
+
+        <a href="#network" class="nav-link">
+            <span>05</span>
+            NETWORK
+        </a>
+
     </nav>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
-  </header>
 
-  <main>
+    <div class="header-status">
 
-    <section class="hero">
+        <div class="status-dot"></div>
 
-      <div class="hero-info">
-        <div class="status">
-          <span></span> NEXUS SYSTEM ONLINE
+        <span>
+            NETWORK ONLINE
+        </span>
+
+    </div>
+
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main id="home">
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero section">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker reveal">
+
+            <span class="kicker-line"></span>
+
+            <span>
+                SYSTEM // NXS-01
+            </span>
+
+            <span class="kicker-line"></span>
+
         </div>
 
-        <p class="eyebrow">THE GAMING NETWORK / 001</p>
 
-        <h1>
-          EVERYTHING<br>
-          <span>GAMING.</span>
+        <h1 class="hero-title">
+
+            <span class="title-line reveal">
+                EVERYTHING
+            </span>
+
+            <span class="title-line title-accent reveal">
+                GAMING<span class="title-dot">.</span>
+            </span>
+
         </h1>
 
-        <p class="hero-text">
-          Games, media, news, reviews, hardware and culture —
-          connected in one place.
+
+        <div class="hero-bottom">
+
+            <p class="hero-description reveal">
+
+                Games. Media. News. Hardware.
+                Reviews. Culture.
+
+                <br>
+
+                One network connecting everything.
+
+            </p>
+
+
+            <div class="hero-actions reveal">
+
+                <a
+                    href="#explore"
+                    class="primary-button magnetic"
+                >
+
+                    <span>
+                        ENTER NEXUS
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#featured"
+                    class="secondary-button"
+                >
+
+                    VIEW SIGNAL
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO VISUAL -->
+
+    <div class="hero-visual">
+
+        <div class="orbit orbit-one"></div>
+
+        <div class="orbit orbit-two"></div>
+
+        <div class="orbit orbit-three"></div>
+
+
+        <div class="core">
+
+            <div class="core-inner">
+                N
+            </div>
+
+        </div>
+
+
+        <div class="floating-node node-one">
+            GAMES
+        </div>
+
+        <div class="floating-node node-two">
+            MEDIA
+        </div>
+
+        <div class="floating-node node-three">
+            NEWS
+        </div>
+
+        <div class="floating-node node-four">
+            HARDWARE
+        </div>
+
+    </div>
+
+
+    <!-- SYSTEM PANEL -->
+
+    <div class="system-panel">
+
+        <div class="system-row">
+
+            <span>
+                NEXUS NODE
+            </span>
+
+            <strong>
+                NXS-01
+            </strong>
+
+        </div>
+
+        <div class="system-row">
+
+            <span>
+                STATUS
+            </span>
+
+            <strong class="green">
+                ONLINE
+            </strong>
+
+        </div>
+
+        <div class="system-row">
+
+            <span>
+                INDEX
+            </span>
+
+            <strong id="indexCounter">
+                0000
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        <span>
+            SCROLL TO EXPLORE
+        </span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPLORE
+========================================================= -->
+
+<section
+    id="explore"
+    class="section explore-section"
+>
+
+    <div class="section-heading reveal">
+
+        <div>
+
+            <span class="section-number">
+                02 / EXPLORE
+            </span>
+
+            <h2>
+                ENTER THE
+                <span>NEXUS.</span>
+            </h2>
+
+        </div>
+
+
+        <p>
+            A connected hub for everything
+            surrounding gaming.
         </p>
 
-        <div class="buttons">
-          <a href="#explore" class="primary">EXPLORE NEXUS →</a>
-          <a href="#featured" class="secondary">VIEW FEATURED</a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="orb"></div>
-        <div class="orb-ring ring1"></div>
-        <div class="orb-ring ring2"></div>
-        <div class="orb-ring ring3"></div>
-
-        <div class="visual-label label1">NXS / 001</div>
-        <div class="visual-label label2">ONLINE</div>
-      </div>
-
-    </section>
-
-
-    <section class="explore" id="explore">
-
-      <div class="section-heading">
-        <span>01</span>
-        <h2>EXPLORE NEXUS</h2>
-      </div>
-
-      <div class="card-grid">
-
-        <a class="card large" href="#" id="games">
-          <div class="card-number">01</div>
-          <div>
-            <p>DISCOVER</p>
-            <h3>GAMES</h3>
-            <span>Explore the games you know and discover something new.</span>
-          </div>
-          <b>↗</b>
-        </a>
-
-        <a class="card" href="#" id="media">
-          <div class="card-number">02</div>
-          <div>
-            <p>WATCH</p>
-            <h3>MEDIA</h3>
-            <span>Trailers, screenshots and gaming content.</span>
-          </div>
-          <b>↗</b>
-        </a>
-
-        <a class="card" href="#" id="news">
-          <div class="card-number">03</div>
-          <div>
-            <p>STAY INFORMED</p>
-            <h3>NEWS</h3>
-            <span>The latest happenings in gaming.</span>
-          </div>
-          <b>↗</b>
-        </a>
-
-        <a class="card" href="#" id="reviews">
-          <div class="card-number">04</div>
-          <div>
-            <p>OUR TAKE</p>
-            <h3>REVIEWS</h3>
-            <span>Opinions, ratings and detailed breakdowns.</span>
-          </div>
-          <b>↗</b>
-        </a>
-
-        <a class="card" href="#" id="hardware">
-          <div class="card-number">05</div>
-          <div>
-            <p>TECH</p>
-            <h3>HARDWARE</h3>
-            <span>Consoles, PCs, accessories and technology.</span>
-          </div>
-          <b>↗</b>
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <section class="featured" id="featured">
-
-      <div class="section-heading">
-        <span>02</span>
-        <h2>FEATURED</h2>
-      </div>
-
-      <article class="feature-card">
-
-        <div class="feature-image">
-          <div class="feature-overlay"></div>
-
-          <div class="feature-tag">NEXUS SPOTLIGHT</div>
-
-          <div class="feature-title">
-            <p>FEATURED STORY</p>
-            <h2>THE FUTURE<br>OF GAMING</h2>
-            <a href="#">READ STORY →</a>
-          </div>
-        </div>
-
-      </article>
-
-    </section>
-
-
-    <section class="trending">
-
-      <div class="section-heading">
-        <span>03</span>
-        <h2>TRENDING NOW</h2>
-      </div>
-
-      <div class="trending-list">
-
-        <div class="trend">
-          <span>01</span>
-          <div>
-            <small>GAMES</small>
-            <h3>What's worth playing right now?</h3>
-          </div>
-          <b>↗</b>
-        </div>
-
-        <div class="trend">
-          <span>02</span>
-          <div>
-            <small>HARDWARE</small>
-            <h3>The technology powering modern gaming</h3>
-          </div>
-          <b>↗</b>
-        </div>
-
-        <div class="trend">
-          <span>03</span>
-          <div>
-            <small>MEDIA</small>
-            <h3>New trailers and gaming media</h3>
-          </div>
-          <b>↗</b>
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-    <div>
-      <div class="footer-logo">NEXUS</div>
-      <p>THE GAMING NETWORK</p>
     </div>
+
+
+    <div class="explore-grid">
+
+
+        <!-- GAMES -->
+
+        <article
+            class="feature-card card-large tilt-card reveal"
+            data-category="GAMES"
+        >
+
+            <div class="card-number">
+                01
+            </div>
+
+            <div class="card-icon">
+                ◈
+            </div>
+
+            <div class="card-content">
+
+                <span>
+                    CORE // 001
+                </span>
+
+                <h3>
+                    GAMES
+                </h3>
+
+                <p>
+                    Discover games, hidden gems,
+                    releases and experiences.
+                </p>
+
+            </div>
+
+            <div class="card-arrow">
+                ↗
+            </div>
+
+            <div class="card-grid"></div>
+
+        </article>
+
+
+
+        <!-- MEDIA -->
+
+        <article
+            class="feature-card tilt-card reveal"
+            data-category="MEDIA"
+        >
+
+            <div class="card-number">
+                02
+            </div>
+
+            <div class="card-icon">
+                ◉
+            </div>
+
+            <div class="card-content">
+
+                <span>
+                    SIGNAL // 002
+                </span>
+
+                <h3>
+                    MEDIA
+                </h3>
+
+                <p>
+                    Videos, clips, screenshots
+                    and gaming culture.
+                </p>
+
+            </div>
+
+            <div class="card-arrow">
+                ↗
+            </div>
+
+        </article>
+
+
+
+        <!-- NEWS -->
+
+        <article
+            class="feature-card tilt-card reveal"
+            data-category="NEWS"
+        >
+
+            <div class="card-number">
+                03
+            </div>
+
+            <div class="card-icon">
+                +
+            </div>
+
+            <div class="card-content">
+
+                <span>
+                    SIGNAL // 003
+                </span>
+
+                <h3>
+                    NEWS
+                </h3>
+
+                <p>
+                    What's happening across
+                    the gaming world.
+                </p>
+
+            </div>
+
+            <div class="card-arrow">
+                ↗
+            </div>
+
+        </article>
+
+
+
+        <!-- REVIEWS -->
+
+        <article
+            class="feature-card tilt-card reveal"
+            data-category="REVIEWS"
+        >
+
+            <div class="card-number">
+                04
+            </div>
+
+            <div class="card-icon">
+                ★
+            </div>
+
+            <div class="card-content">
+
+                <span>
+                    ANALYSIS // 004
+                </span>
+
+                <h3>
+                    REVIEWS
+                </h3>
+
+                <p>
+                    Honest opinions, ratings
+                    and deep dives.
+                </p>
+
+            </div>
+
+            <div class="card-arrow">
+                ↗
+            </div>
+
+        </article>
+
+
+
+        <!-- HARDWARE -->
+
+        <article
+            class="feature-card card-wide tilt-card reveal"
+            data-category="HARDWARE"
+        >
+
+            <div class="card-number">
+                05
+            </div>
+
+            <div class="card-icon">
+                ⬡
+            </div>
+
+            <div class="card-content">
+
+                <span>
+                    SYSTEM // 005
+                </span>
+
+                <h3>
+                    HARDWARE
+                </h3>
+
+                <p>
+                    Consoles, PCs, accessories,
+                    setups and technology.
+                </p>
+
+            </div>
+
+            <div class="card-arrow">
+                ↗
+            </div>
+
+            <div class="hardware-lines"></div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURED
+========================================================= -->
+
+<section
+    id="featured"
+    class="section featured-section"
+>
+
+    <div class="section-heading reveal">
+
+        <div>
+
+            <span class="section-number">
+                03 / FEATURED
+            </span>
+
+            <h2>
+                CURRENT
+                <span>SIGNAL.</span>
+            </h2>
+
+        </div>
+
+        <p>
+            What's currently moving
+            through the network.
+        </p>
+
+    </div>
+
+
+    <div class="featured-container reveal">
+
+
+        <div class="featured-image">
+
+            <div class="image-overlay"></div>
+
+            <div class="image-label">
+                NEXUS FEATURE // 001
+            </div>
+
+            <div class="image-center">
+                NEXUS
+            </div>
+
+        </div>
+
+
+        <div class="featured-info">
+
+            <span class="featured-tag">
+                EDITORIAL
+            </span>
+
+            <h3>
+                THE NEXT
+                GENERATION
+                OF GAMING.
+            </h3>
+
+            <p>
+                Gaming is bigger than the games
+                themselves. Hardware, creators,
+                communities, technology and
+                culture all connect here.
+            </p>
+
+
+            <div class="featured-meta">
+
+                <div>
+                    <span>
+                        CATEGORY
+                    </span>
+
+                    <strong>
+                        CULTURE
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        STATUS
+                    </span>
+
+                    <strong>
+                        LIVE
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <button class="text-button">
+                READ FEATURE
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TRENDING
+========================================================= -->
+
+<section
+    id="trending"
+    class="section trending-section"
+>
+
+    <div class="section-heading reveal">
+
+        <div>
+
+            <span class="section-number">
+                04 / TRENDING
+            </span>
+
+            <h2>
+                ON THE
+                <span>RADAR.</span>
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="trending-list">
+
+
+        <div class="trend-item reveal">
+
+            <span class="trend-number">
+                01
+            </span>
+
+            <div class="trend-main">
+
+                <span>
+                    FEATURE
+                </span>
+
+                <h3>
+                    THE FUTURE OF
+                    BROWSER GAMING
+                </h3>
+
+            </div>
+
+            <div class="trend-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+
+        <div class="trend-item reveal">
+
+            <span class="trend-number">
+                02
+            </span>
+
+            <div class="trend-main">
+
+                <span>
+                    HARDWARE
+                </span>
+
+                <h3>
+                    BUILDING THE
+                    PERFECT SETUP
+                </h3>
+
+            </div>
+
+            <div class="trend-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+
+        <div class="trend-item reveal">
+
+            <span class="trend-number">
+                03
+            </span>
+
+            <div class="trend-main">
+
+                <span>
+                    CULTURE
+                </span>
+
+                <h3>
+                    WHY GAMING
+                    KEEPS EVOLVING
+                </h3>
+
+            </div>
+
+            <div class="trend-arrow">
+                ↗
+            </div>
+
+        </div>
+
+
+
+        <div class="trend-item reveal">
+
+            <span class="trend-number">
+                04
+            </span>
+
+            <div class="trend-main">
+
+                <span>
+                    MEDIA
+                </span>
+
+                <h3>
+                    INSIDE THE
+                    GAMING COMMUNITY
+                </h3>
+
+            </div>
+
+            <div class="trend-arrow">
+                ↗
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     NETWORK
+========================================================= -->
+
+<section
+    id="network"
+    class="section network-section"
+>
+
+    <div class="network-box reveal">
+
+        <div class="network-top">
+
+            <span>
+                NEXUS NETWORK
+            </span>
+
+            <span>
+                NXS-01
+            </span>
+
+        </div>
+
+
+        <div class="network-title">
+
+            <span>
+                ONE
+            </span>
+
+            <span>
+                NETWORK.
+            </span>
+
+            <span class="outlined">
+                INFINITE
+            </span>
+
+            <span>
+                SIGNAL.
+            </span>
+
+        </div>
+
+
+        <div class="network-bottom">
+
+            <p>
+                NEXUS is built to connect
+                every part of gaming culture
+                into one digital destination.
+            </p>
+
+            <a
+                href="#home"
+                class="primary-button magnetic"
+            >
+                RETURN HOME →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        <span>
+            NEXUS
+        </span>
+
+        <small>
+            THE GAMING NETWORK
+        </small>
+
+    </div>
+
 
     <div class="footer-status">
-      SYSTEM STATUS<br>
-      <span>● OPERATIONAL</span>
+
+        <div class="status-dot"></div>
+
+        SYSTEM ONLINE
+
     </div>
 
-    <div class="copyright">
-      PROJECT NEXUS / 2026
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <div class="footer-copy">
+
+        © 2026 NEXUS
+
+        <br>
+
+        BUILT FOR THE NEXT LEVEL.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="js/loader.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/cards.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>
